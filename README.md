@@ -26,27 +26,9 @@ A sample project showcasing how to build a modern data warehouse and perform bus
 4. **Analytics & Reporting**  
    Use SQL to generate reports and derive business insights.
 
----
-
-## 🎯 Learning Objectives
-
-This project is ideal for:
-
-- SQL Developers  
-- Data Engineers / Data Architects  
-- ETL Developers and Analysts
-
-You will practice key skills:
-
-- SQL data modeling & queries  
-- ETL pipeline development  
-- Business data analysis
-
----
-
 ## 🛠️ Tools & Resources
 
-- Sample CSV datasets (in the `datasets/` folder)  
+- Sample CSV datasets
 - **SQL Server Express** – for database storage  
 - **SQL Server Management Studio (SSMS)** – for database development  
 - **Git + GitHub** – version control & collaboration  
@@ -103,36 +85,9 @@ You will practice key skills:
 └── README.md          # This guide
 ```
 
----
-
-## ☕ Stay Connected
-
-- **You**: A data engineer, student, or data analyst  
-- **Me**: Baraa Khatib Salkini – Data Engineer & YouTuber (Data With Baraa)  
-- **Free courses & resources**:
-  - SQL Full Course  
-  - Tableau Full Course  
-  - SQL Data Warehouse Project  
-  - SQL Exploratory Data Analysis Project  
-  - SQL Advanced Data Analysis Project  
-  - Tableau Sales & HR Projects  
-  - ChatGPT Materials  
-- **Support**: Subscribe, like, and comment to support the work 🧡
 
 ---
 
 ## 🛡️ License
 
 Distributed under the **MIT License**. Free to use and adapt — just keep the author credits.
-
----
-
-## 🌟 Author
-
-**Baraa Khatib Salkini**  
-IT Professional & YouTuber – **Data With Baraa**  
-Sharing knowledge on SQL, Data Engineering, BI & Analytics — 100% Free
-
----
-
-> Clone the repo, follow the steps, and build your own powerful data warehouse! 💪
