@@ -1,87 +1,138 @@
-# 🏗️ SQL-Based Data Warehouse Project
+# 📊 Data Warehouse & Analytics Project
 
-## 📌 Project Overview
-
-This repository demonstrates a simplified **Data Warehouse pipeline** built using pure SQL (MySQL), simulating the classic architecture of transforming raw transactional data into structured, analysis-ready layers.
-
-The goal is to show how to manually implement **Staging → ODS → Data Mart → Reporting** layers using SQL, following best practices of modularity, readability, and scalability in a warehouse context.
+A sample project showcasing how to build a modern data warehouse and perform business analytics using SQL Server, based on the **Medallion Architecture** (Bronze → Silver → Gold) to transform raw data into actionable business insights.
 
 ---
 
-## 🛠️ Technologies Used
+## 🏗️ Data Architecture
 
-- **MySQL Workbench**
-- **SQL (DDL + DML)**
-- Common Table Expressions (CTEs)
-- Window Functions
-- Layered Data Architecture
+- **Bronze**: Import raw data (CSV from ERP/CRM systems) into SQL Server.
+- **Silver**: Clean, standardize, and transform the data.
+- **Gold**: Build a star schema data model for reporting and analytics.
 
 ---
 
-## 🗂️ Project Structure
+## 📖 Project Overview
+
+1. **Data Architecture**  
+   Design the data warehouse using the Bronze – Silver – Gold approach.
+
+2. **ETL Pipelines**  
+   Build Extract – Transform – Load processes from raw CSV to analytics-ready tables.
+
+3. **Data Modeling**  
+   Create fact and dimension tables optimized for business queries.
+
+4. **Analytics & Reporting**  
+   Use SQL to generate reports and derive business insights.
+
+---
+
+## 🎯 Learning Objectives
+
+This project is ideal for:
+
+- SQL Developers  
+- Data Engineers / Data Architects  
+- ETL Developers and Analysts
+
+You will practice key skills:
+
+- SQL data modeling & queries  
+- ETL pipeline development  
+- Business data analysis
+
+---
+
+## 🛠️ Tools & Resources
+
+- Sample CSV datasets (in the `datasets/` folder)  
+- **SQL Server Express** – for database storage  
+- **SQL Server Management Studio (SSMS)** – for database development  
+- **Git + GitHub** – version control & collaboration  
+- **Draw.io** – for architecture & data modeling diagrams  
+- **Notion** – for planning and documentation
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Environment Setup
+
+- Install **SQL Server Express**  
+- Install **SSMS (SQL Server Management Studio)**  
+- Clone the repository:  
+  ```bash
+  git clone https://github.com/DataWithBaraa/sql-data-warehouse-project.git
+  cd sql-data-warehouse-project
+  ```
+
+### 2. Prepare the Data
+
+- Place the CSV files into the `datasets/` folder  
+- Update file paths in the SQL scripts if necessary
+
+### 3. Run the ETL Process
+
+- Bronze Layer: run scripts in `scripts/bronze/`  
+- Silver Layer: run scripts in `scripts/silver/`  
+- Gold Layer: use scripts in `scripts/gold/` to build the star schema
+
+### 4. Test & Analyze
+
+- Use the scripts in `tests/` to validate data quality  
+- Run SQL queries in `scripts/gold/` or connect dashboards for analysis
+
+---
+
+## 📂 Project Structure
 
 ```
-📁 sql-data-warehouse-project/
-├── 01_create_staging_tables.sql        # Create staging tables for raw data
-├── 02_create_ods_tables.sql            # Create ODS tables (cleansed + integrated)
-├── 03_create_data_marts.sql            # Create star schema fact and dimension tables
-├── 04_create_reporting_views.sql       # Create reporting views with business logic
+/
+├── datasets/          # Source CSV files (ERP + CRM)
+├── docs/              # Documentation and architecture diagrams
+│   ├── *.drawio       # Diagrams: ETL flow, architecture, data models
+│   └── naming-conventions.md
+├── scripts/
+│   ├── bronze/        # Scripts for raw data ingestion
+│   ├── silver/        # Scripts for cleaning and transformation
+│   └── gold/          # Scripts to create star schema
+├── tests/             # SQL scripts for data quality testing
+├── requirements.txt   # Dependencies (if any)
+├── LICENSE            # MIT License
+└── README.md          # This guide
 ```
 
 ---
 
-## 🔄 Pipeline Architecture
+## ☕ Stay Connected
 
-This project follows a **4-layer SQL data pipeline**:
-
-1. **Staging Layer**
-   - Raw transactional data is loaded with minimal transformations
-   - Data is typically ingested from external CSV/flat files (simulated)
-
-2. **ODS Layer (Operational Data Store)**
-   - Performs data cleansing, type conversion, and basic standardization
-   - Acts as an intermediate, atomic layer before modeling
-
-3. **Data Mart Layer**
-   - Star schema is constructed using fact and dimension tables
-   - Supports typical OLAP-style queries
-
-4. **Reporting Layer**
-   - Analytical views are created to serve downstream business intelligence tools or analysts
+- **You**: A data engineer, student, or data analyst  
+- **Me**: Baraa Khatib Salkini – Data Engineer & YouTuber (Data With Baraa)  
+- **Free courses & resources**:
+  - SQL Full Course  
+  - Tableau Full Course  
+  - SQL Data Warehouse Project  
+  - SQL Exploratory Data Analysis Project  
+  - SQL Advanced Data Analysis Project  
+  - Tableau Sales & HR Projects  
+  - ChatGPT Materials  
+- **Support**: Subscribe, like, and comment to support the work 🧡
 
 ---
 
-## 📊 Sample Use Cases
+## 🛡️ License
 
-- Simulating a sales reporting environment
-- Testing CTE-based SQL logic in layered architecture
-- Practicing table design and dimensional modeling (star schema)
-- Understanding ETL logic using only SQL
+Distributed under the **MIT License**. Free to use and adapt — just keep the author credits.
 
 ---
 
-## 📌 How to Use
+## 🌟 Author
 
-1. Run each SQL file in order from `01_` to `04_`
-2. Each file is modular and contains comments for clarity
-3. Sample data should be inserted into staging tables before running transformations
-4. Reporting views will return aggregated business metrics for analysis
-
----
-
-## 💡 Future Improvements
-
-- Add stored procedures to simulate ETL orchestration  
-- Integrate scheduling (e.g., using MySQL Events or external orchestrators)  
-- Add mock data generation scripts  
-- Visualize output using a BI tool (e.g., Tableau, Power BI, Metabase)
+**Baraa Khatib Salkini**  
+IT Professional & YouTuber – **Data With Baraa**  
+Sharing knowledge on SQL, Data Engineering, BI & Analytics — 100% Free
 
 ---
 
-## 🧑 About This Project
-
-This project is designed as a **learning exercise** in implementing a full SQL-based data warehouse flow — without requiring external tools like Airflow or dbt. It's ideal for practicing structured thinking in a data architecture context and for showcasing **SQL warehousing capability** in interviews or portfolios.
-
----
-
-📂 Explore the files, fork the repo, or contribute ideas for improvement!
+> Clone the repo, follow the steps, and build your own powerful data warehouse! 💪
